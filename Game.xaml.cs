@@ -199,7 +199,7 @@ internal class AB
             X = X + interval * Vx;
             if (Y >= 0)
             {
-                result.Add(new Point(X*50,Y*100-400));
+                result.Add(new Point(X*80,Y*80));
                 Console.Write($"X: {Math.Round(X, 4)} м  Y: {Math.Round(Y, 4)} м  t: {Math.Round(time, 4)} с \n");
             }
             else
