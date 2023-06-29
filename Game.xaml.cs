@@ -64,7 +64,7 @@ namespace AngryBirds
             Image aRectangle = new Image();
             aRectangle.Width = 50;
             aRectangle.Height = 50;
-            aRectangle.Source = new BitmapImage(new Uri("C:\\Users\\Daria\\source\\repos\\AngryBirds\\птица.png"));
+            aRectangle.Source = new BitmapImage(new Uri("pack://application:,,,/птица.png"));
 
 
             TranslateTransform animatedTranslateTransform =
