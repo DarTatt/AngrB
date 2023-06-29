@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:AngryBirds"
         mc:Ignorable="d"
         Title="Game" Height="600" Width="1000">
-    <Canvas Margin="0,0,0,-6">
-        <Canvas.Background>
+    <Window.Background>
             <ImageBrush ImageSource="/Фон2.jpg" />
-        </Canvas.Background>
+        </Window.Background>
+
+    <Canvas Margin="0,0,0,0">
         <Canvas.Resources>
             <PathGeometry x:Key="AnimationPath">
             </PathGeometry>
