@@ -25,7 +25,7 @@ namespace AngryBirds
         //public RoutedPropertyChangedEventArgs<double> Value { get; private set; }
         private double sp;
         private double a;
-        int gravity = 5;
+        //int gravity = 5;
         public Window1()
         {
             InitializeComponent();
@@ -78,7 +78,7 @@ namespace AngryBirds
 
             Canvas mainPanel = new Canvas();
             mainPanel.Width = 400;
-            mainPanel.Height = 400;
+            mainPanel.Height = 600;
             mainPanel.Children.Add(aRectangle);
             this.Content = mainPanel;
 
@@ -98,7 +98,7 @@ namespace AngryBirds
             PathGeometry animationPath = new PathGeometry();
             PathFigure pFigure = new PathFigure();
 
-            pFigure.StartPoint = new Point(10, 300);
+            pFigure.StartPoint = new Point(0, 350);
             PolyBezierSegment pBezierSegment = new PolyBezierSegment();
             foreach (var point in points)
                 pBezierSegment.Points.Add(point);
@@ -143,7 +143,7 @@ namespace AngryBirds
                 new PropertyPath(TranslateTransform.YProperty));
 
             Storyboard pathAnimationStoryboard = new Storyboard();
-            pathAnimationStoryboard.RepeatBehavior = RepeatBehavior.Forever;
+            //pathAnimationStoryboard.RepeatBehavior = RepeatBehavior.Forever;
             pathAnimationStoryboard.Children.Add(translateXAnimation);
             pathAnimationStoryboard.Children.Add(translateYAnimation);
             pathAnimationStoryboard.Begin(this);
@@ -199,7 +199,7 @@ internal class AB
             X = X + interval * Vx;
             if (Y >= 0)
             {
-                result.Add(new Point(X * 100, Y * 100));
+                result.Add(new Point(X*50,Y*100-400));
                 Console.Write($"X: {Math.Round(X, 4)} м  Y: {Math.Round(Y, 4)} м  t: {Math.Round(time, 4)} с \n");
             }
             else
